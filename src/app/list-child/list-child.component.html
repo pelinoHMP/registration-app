@@ -1,0 +1,30 @@
+<div id="listSection">
+    <H1>List of Registered Students</H1>
+    <table style="width:100%" >
+            <thead>
+                <tr>
+                    <th >Student Name</th>
+                    <th>Gender</th>
+                    <th>Age</th> 
+                    <th>Contact #</th>
+                    <th>Email Add.</th>
+                    <th>Course</th> 
+                    <th>Year</th> 
+                    <th>Action</th>     
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let student of information">
+                    <td  >{{student.fullname}}</td>
+                    <td>{{student.gender}}</td>
+                    <td  >{{student.age}}</td>
+                    <td  >{{student.contact}}</td>
+                    <td  >{{student.email}}</td>
+                    <td >{{student.course}}</td>
+                    <td >{{student.year}}</td>
+                    <td><button (click)="onEdit(student)">EDIT</button></td>
+                </tr>
+            </tbody>
+        
+    </table>
+</div>

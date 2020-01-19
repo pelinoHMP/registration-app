@@ -1,0 +1,130 @@
+/* #templateSection{
+    padding: 20px;
+    background-color: white;
+    height: 300px;
+    box-shadow: 1px 1px 9px #888888;
+    width: 260px;
+    position: absolute;
+    top: 200px;
+    left: 434px;
+}
+input{
+    width: 239px;
+    padding: 10px;
+    
+}
+button{
+    text-align: center;
+    width: 264px;
+    padding: 10px;
+    border: 1px rgb(0, 204, 102);
+    background-color:rgb(0, 204, 102)
+}
+
+.email{
+    position: absolute;
+    top: 203px;
+    color: red;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#dataSection{
+    background-color: white;
+    padding: 20px;
+    height: 260px;
+    box-shadow: 1px 1px 9px #888888;
+    width: 260px;
+    position: absolute;
+    top: 200px;
+    left: 720px;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+} */
+#templateSection{
+    padding: 20px;
+    background-color: white;
+    height: 340px;
+    box-shadow: 1px 1px 9px #888888;
+    width: 850px;
+    position: absolute;
+    top: 132px;
+    left: 200px;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+label{
+    font-family: Arial, Helvetica, sans-serif;
+}
+button{
+    text-align: center;
+    width: 357px;
+    position: absolute;
+    top: 305px;
+    left: 282px;
+    padding: 10px;
+    border: 1px rgb(0, 204, 102);
+    background-color: rgb(0, 204, 102);
+}
+.red{
+    position: absolute;
+    font-weight: bold;
+    top: 129px;
+    left: 92px;
+    color: red;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.email{
+    position: absolute;
+    font-weight: bold;
+    top: 119px;
+    left: 434px;
+    color: red;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.age{
+    position: absolute;
+    font-weight: bold;
+    top: 181px;
+    left: 333px;
+    color: red;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.contact{
+    position: absolute;
+    font-weight: bold;
+    top: 181px;
+    left: 632px;
+    color: red;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.course{
+    position: absolute;
+    font-weight: bold;
+    top: 260px;
+    left: 82px;
+    color: red;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.year{
+    position: absolute;
+    font-weight: bold;
+    top: 260px;
+    left: 346px;
+    color: red;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+input, select{
+    width: 200px;
+    padding: 5px;
+}

@@ -1,0 +1,48 @@
+<div id="templateSection">
+    <h1>Registration Application</h1>
+    <form (ngSubmit)="onSubmit(sampleForm)" #sampleForm="ngForm">
+        <label>
+            Fullname: <input name="name" [(ngModel)]="fullname" type="text" required minlength="4" placeholder="Your Fullname" #name="ngModel"/>
+        </label>&nbsp;&nbsp;&nbsp;
+        <label>Email Address: <input type="email" name="emailAdd" #email="ngModel" [(ngModel)]="emailAddress" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required placeholder="Your Email"/></label><br><br>
+        <p><label>
+                Gender: 
+                <select
+                [(ngModel)]="genderSelected" #gender="ngModel" name="gender" required> 
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+        </label>&nbsp;&nbsp;
+            <label>Age: <input name="age" [(ngModel)]="age" type="number" required placeholder="Your Age" #ageStudent="ngModel"/></label>
+            <label>&nbsp;&nbsp;Contact #: <input name="contact" [(ngModel)]="contact" type="text" required placeholder="Your Contact Number" #contactNumber="ngModel"/></label>
+        </p>&nbsp;
+        <p>
+            <label>Course: <input name="course" [(ngModel)]="course" type="text" required placeholder="Your Course" #Course="ngModel"/> </label>&nbsp;&nbsp;
+            <label>Year: <input name="year" [(ngModel)]="year" type="text" required placeholder="Your Year" #Year="ngModel"/> </label>
+        </p>
+
+        <!-- VALIDATION SECTION -->
+        <div *ngIf="name.invalid && (name.dirty || name.touched)"> 
+            <div class="red" *ngIf="name.errors.required">**Name is required! </div>
+            <div class="red" *ngIf="name.errors.minlength">**Name must be at least 4 characters long.</div>
+        </div>
+        <div *ngIf="email.touched">
+            <p *ngIf="email.errors?.required" class="email">**Email is a required!</p>
+            <p *ngIf="email.errors?.pattern" class="email">**This is not a valid Email!!!</p>
+        </div>
+        <div *ngIf="ageStudent.touched">
+            <p *ngIf="ageStudent.errors?.required" class="age">**Age is required!</p>
+        </div>
+        <div *ngIf="contactNumber.touched">
+            <p *ngIf="contactNumber.errors?.required" class="contact">**Contact Number is required!</p>
+        </div>
+        <div *ngIf="Course.touched">
+            <p *ngIf="Course.errors?.required" class="course">**Course is required!</p>
+        </div>
+        <div *ngIf="Year.touched">
+            <p *ngIf="Year.errors?.required" class="year">**Year is required!</p>
+        </div>
+        <button [disabled]="!sampleForm.form.valid" >Submit</button><br>
+    </form>
+</div>
+<app-list-child [information]="listStudent" (studentEditEvent)="getInformation($event)"></app-list-child>
